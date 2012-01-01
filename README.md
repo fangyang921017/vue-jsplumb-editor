@@ -2,9 +2,6 @@
 
 [在线预览](https://fangyang921017.github.io/vue-jsplumb-editor/dist/index.html)
 ## 功能点
-主要分三个区域：
-
-![](/public/view.jpg)
 
 #### 菜单节点区域
 - [x] 从菜单中拖动一个节点到主设计区域，可放置该节点
