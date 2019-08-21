@@ -1,3 +1,3 @@
 module.exports = {
-  publicPath: './vue-jsplumb-editor/dist/',
+  publicPath: '/vue-jsplumb-editor/dist/',
 };
