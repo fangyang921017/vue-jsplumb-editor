@@ -1,0 +1,63 @@
+{
+  "name": "vue-jsplumb-demo",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "ant-design-vue": "^1.3.8",
+    "axios": "^0.18.0",
+    "core-js": "^2.6.5",
+    "element-ui": "^2.8.2",
+    "jquery": "^3.4.1",
+    "jsplumb": "^2.9.2",
+    "mockjs": "^1.0.1-beta3",
+    "panzoom": "^8.1.0",
+    "popper.js": "^1.15.0",
+    "tooltip.js": "^1.3.2",
+    "uuid": "^3.3.2",
+    "vue": "^2.6.10",
+    "vue-draggable-resizable": "^2.0.0-rc1",
+    "vue-router": "^3.0.3",
+    "vuedraggable": "^2.20.0",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.7.0",
+    "@vue/cli-plugin-eslint": "^3.7.0",
+    "@vue/cli-service": "^3.7.0",
+    "@vue/eslint-config-airbnb": "^4.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.1.0",
+    "vue-template-compiler": "^2.5.21"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "@vue/airbnb"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+}
