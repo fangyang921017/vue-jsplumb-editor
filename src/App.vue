@@ -4,7 +4,7 @@
                height="42px">
       <img src="./assets/logo.png"
            alt="">
-      <span class="logoFont">PCI机器学习平台</span>
+      <span class="logoFont">机器学习平台</span>
       <router-link class="navItem"
                    active-class="active"
                    to="/index">ai平台</router-link>

@@ -111,7 +111,7 @@
                       <div class="model-attr">
                         <p>
                           <span class="item">项目名称</span>
-                          <span class="value">PCITest</span>
+                          <span class="value">Test</span>
                         </p>
                         <p>
                           <span class="item">创建日期</span>
