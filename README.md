@@ -1,5 +1,7 @@
 # vue-jsplumb-editor
 
+## 预览
+[点我预览](https://fangyang921017.github.io/vue-jsplumb-editor/dist/). 
 ## 功能点
 主要分三个区域：
 
