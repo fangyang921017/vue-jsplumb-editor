@@ -8,9 +8,6 @@
       <router-link class="navItem"
                    active-class="active"
                    to="/index">ai平台</router-link>
-      <router-link class="navItem"
-                   active-class="active"
-                   to="/operation">运维中心</router-link>
       <el-dropdown>
         <span class="el-dropdown-link">
           更多<i class="el-icon-arrow-down el-icon--right"></i>
