@@ -158,11 +158,22 @@ function bindDragEventOnNode(newNode) {
   });
 }
 
+/**
+ * @descriptin 修改节点状态
+ * @param {string} nodeId
+ * @param {string} state
+ */
 function changeStateByNodeId(nodeId, state) {
   const nodeEl = document.getElementById(nodeId);
   nodeEl.vNode.$children[0].state = state;
 }
 
+
+/**
+ * @description 根据uuids（[a,b]）获取连接线
+ * @param {array} uuids
+ * @returns {Connector}
+ */
 function getConnectorByUuids(uuids) {
   const edge = uuids.join(CONNECTORSEPARATESYMBOL);
   const connectors = instance.getAllConnections();
@@ -170,6 +181,10 @@ function getConnectorByUuids(uuids) {
   return connector;
 }
 
+/**
+ * @description 指定边让连接线高亮
+ * @param {*} edges
+ */
 function blingConnectors(edges) {
   const connectors = instance.getAllConnections();
   connectors.forEach((c) => {
