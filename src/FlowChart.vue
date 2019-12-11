@@ -177,11 +177,12 @@
     </el-main>
   </el-container>
 </template>
-<script>
+<script lang="ts">
+import Vue, { CreateElement } from 'vue';
 import API from './api/index';
 import FlowChart from './FlowChart/index';
 
-export default {
+export default Vue.extend({
   data() {
     return {
       isShowNode: false,
@@ -196,8 +197,8 @@ export default {
       filterText: '',
       activeName: 'first',
       toolBarShow: 'component',
-      modelName: '屏蔽门故障预测',
-      modelDescription: '利用回归模型预测屏蔽门故障。',
+      modelName: '你你您',
+      modelDescription: '你你您你你您你你您你你您',
       gridData: [
         {
           date: '2016-05-02',
@@ -235,7 +236,7 @@ export default {
     };
   },
   watch: {
-    filterText(val) {
+    filterText(val: string) {
       this.$refs.tree2.filter(val);
     },
   },
@@ -244,26 +245,25 @@ export default {
     FlowChart.on('commandListEmpty', () => {
       this.isUndoDisable = true;
     });
-    FlowChart.on('showNodeData', (nodeId) => {
+    FlowChart.on('showNodeData', () => {
       this.dialogTableVisible = true;
-      console.log(nodeId);
     });
     FlowChart.on('addCommand', () => {
       this.isUndoDisable = false;
     });
-    FlowChart.on('selectNode', (data) => {
+    FlowChart.on('selectNode', (data: string) => {
       this.isShowNode = true;
       this.currentNodeId = data;
     });
-    API.getFlowChartData().then((data) => {
+    API.getFlowChartData().then((data: any) => {
       FlowChart.loadData(data.data);
     });
-    API.getMenuData().then((data) => {
+    API.getMenuData().then((data:any) => {
       this.nodeData = data.data;
     });
   },
   methods: {
-    renderContentFunction(h, { node, data }) {
+    renderContentFunction(h: CreateElement, { node, data }:{node:any, data:any}) {
       const className = node.expanded ? 'el-icon-folder-opened' : 'el-icon-folder';
       const classNameChild = (!data.children && data.icon) ? data.icon : '';
       return h('div', {
@@ -323,17 +323,17 @@ export default {
         ]),
       ]);
     },
-    filterNode(value, data) {
+    filterNode(value:string, data:any) {
       if (!value) return true;
       return data.label.indexOf(value) !== -1;
     },
-    dragoverHandle(ev) {
+    dragoverHandle(ev:Event) {
       ev.preventDefault();
     },
-    dragHandle(ev) {
+    dragHandle(ev:any) {
       ev.dataTransfer.setData('target', ev.target.id);
     },
-    dropHandle(ev) {
+    dropHandle(ev:any) {
       FlowChart.addNode({ pageX: ev.pageX, pageY: ev.pageY }, ev.dataTransfer.getData('target'));
     },
     clickBgHandle() {
@@ -355,7 +355,7 @@ export default {
       });
     },
   },
-};
+});
 </script>
 
 <style lang="scss">

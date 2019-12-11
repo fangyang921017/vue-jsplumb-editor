@@ -15,5 +15,10 @@ export default new Router({
       name: 'index',
       component: Index,
     },
+    {
+      path: '/operation',
+      name: 'operation',
+      component: () => import(/* webpackChunkName: "operation" */ './Operation.vue'),
+    },
   ],
 });

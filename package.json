@@ -23,18 +23,24 @@
     "vue-draggable-resizable": "^2.0.0-rc1",
     "vue-router": "^3.0.3",
     "vuedraggable": "^2.20.0",
-    "vuex": "^3.0.1"
+    "vuex": "^3.0.1",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.7.0",
     "@vue/cli-plugin-eslint": "^3.7.0",
-    "@vue/cli-service": "^3.7.0",
+    "@vue/cli-plugin-typescript": "^4.1.1",
+    "@vue/cli-service": "^4.1.1",
     "@vue/eslint-config-airbnb": "^4.0.0",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
+    "install": "^0.13.0",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.1.0",
+    "typescript": "^3.7.3",
+    "typescriptnpm": "^1.0.1",
     "vue-template-compiler": "^2.5.21"
   },
   "eslintConfig": {
