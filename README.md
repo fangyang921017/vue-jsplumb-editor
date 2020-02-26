@@ -1,6 +1,6 @@
 # vue-jsplumb-editor
 
-[在线预览](https://fangyang921017.github.io/vue-jsplumb-editor/dist/)
+[在线预览](https://ivorfang.top)
 ## 功能点
 主要分三个区域：
 
