@@ -28,6 +28,8 @@ class MenuItem {
     this.el.onclick = (e) => {
       e.stopPropagation();
       this.clickHandle(e);
+      // eslint-disable-next-line no-use-before-define
+      hide();
     };
   }
 
@@ -192,7 +194,6 @@ function generateMenuContainer() {
   ul = document.createElement('ul');
   ul.className = 'fy_contextMenu';
   document.body.appendChild(ul);
-  ul.onmouseup = hide;
 }
 
 /**
