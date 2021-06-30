@@ -1,6 +1,6 @@
 # vue-jsplumb-editor
 
-[在线预览](https://ivorfang.top)
+[在线预览](https://vue-jsplumb-editor-fangyang921017.vercel.app/)
 ## 功能点
 ![image](/dist/md.png)
 
