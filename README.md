@@ -2,7 +2,7 @@
 
 [在线预览](https://vue-jsplumb-editor-fangyang921017.vercel.app/)
 ## 功能点
-![image](/dist/md.png)
+![image](https://raw.githubusercontent.com/fangyang921017/vue-jsplumb-editor/408961afe108078aa550a0bca537662b9372e638/dist/md.png)
 
 #### 菜单节点区域
 - [x] 从菜单中拖动一个节点到主设计区域，可放置该节点
