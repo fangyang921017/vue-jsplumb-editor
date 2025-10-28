@@ -40,12 +40,17 @@ export default {
 
   getEdgesByPointIds(ids) {
     const data = [];
+    const addedEdges = new Set();
     FlowChartJson.edges.forEach((edge) => {
-      ids.forEach((id) => {
-        if (edge.indexOf(id) > -1) {
-          data.push(edge);
+      if (!addedEdges.has(edge)) {
+        for (let i = 0; i < ids.length; i += 1) {
+          if (edge.indexOf(ids[i]) > -1) {
+            data.push(edge);
+            addedEdges.add(edge);
+            break; // 找到匹配后立即跳出，避免重复添加
+          }
         }
-      });
+      }
     });
     return data;
   },
