@@ -35,9 +35,15 @@ export function isEndpoint(anchor) {
  */
 export function createUuid() {
   let uuid = uuidv1();
+  let retryCount = 0;
+  const maxRetries = 100; // 最大重试次数
 
   // 保证生成安全的uuid
   while (uuid.includes(CONNECTORSEPARATESYMBOL)) {
+    retryCount += 1;
+    if (retryCount >= maxRetries) {
+      throw new Error('无法生成有效的UUID，已达到最大重试次数');
+    }
     uuid = uuidv1();
   }
   return uuid;

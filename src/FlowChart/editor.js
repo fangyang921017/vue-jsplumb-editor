@@ -376,6 +376,20 @@ function removeNode(nodeId) {
   const relatedPointIds = [...nodeData.points.sources, ...nodeData.points.targets];
   const nodeEdgesData = model.getEdgesByPointIds(relatedPointIds);
   const nodeEndpointsData = model.getEndpointsByPointIds(relatedPointIds);
+  
+  // 清理tooltip实例以防止内存泄漏
+  relatedPointIds.forEach((pointId) => {
+    const endpoints = instance.getEndpoints(nodeId);
+    if (endpoints) {
+      endpoints.forEach((endpoint) => {
+        if (endpoint.canvas && endpoint.canvas.tip) {
+          endpoint.canvas.tip.dispose();
+          endpoint.canvas.tip = null;
+        }
+      });
+    }
+  });
+  
   model.removeNodeByNodeId(nodeId);
   model.removeEdgesByPointIds(relatedPointIds);
   model.removeEndpointsByPointIds(relatedPointIds);
